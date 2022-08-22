@@ -1,0 +1,19 @@
+<p>register works!</p>
+
+<form>
+    <label for="firstName"> Firstname: </label>
+    <input type="text" name="firstName" placeholder="" /> <br /><br />
+  
+    <label for="lastName"> Lastname: </label>
+    <input type="text" name="lastName" placeholder="" /> <br /><br />
+  
+    <label for="email"> Email: </label>
+    <input type="email" name="email" placeholder="" /> <br /><br />
+  
+    <label for="password"> Password: </label>
+    <input type="password" name="password" placeholder="" /> <br /><br />
+  
+    <span> Already have an account?</span> <a [routerLink]="['/login']"> Login here</a> <br /><br />
+    <input type="button" (click)="formSubmit()" value="Submit" />
+  </form>
+  

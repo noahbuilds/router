@@ -1,0 +1,13 @@
+<p>login works!</p>
+
+
+<form>
+    <label for="email"> Email: </label>
+    <input type="email" name="email" placeholder="" /> <br /><br />
+  
+    <label for="password"> Password: </label>
+    <input type="password" name="password" placeholder="" /> <br /><br />
+  
+    <span> Don't have an account?</span> <a [routerLink]="['/register']"> Register here</a> <br /><br />
+    <input type="button" (click)="login" value="Submit" />
+  </form>
