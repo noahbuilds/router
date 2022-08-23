@@ -1,0 +1,18 @@
+.first-card{
+    background-color: blue;
+    width: 25%;
+    padding: 20px 20px 50px 20px;
+    color: white;
+    margin-bottom: 18px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.second-card{
+    background-color: red;
+    width: 25%;
+    padding: 20px 20px 50px 20px;
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+}

@@ -6,12 +6,34 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AnalyticsComponent } from './analytics/analytics.component';
+import { TasksComponent } from './tasks/tasks.component';
+import { ProfileComponent } from './profile/profile.component';
+
+
 
 const routes = [
   //{path: '', component:AppComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
+      {
+        path: 'analytics',
+        component: AnalyticsComponent
+      },
+      {
+        path: 'tasks',
+        component: TasksComponent
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent
+      },
+    ],
+  },
 ];
 
 @NgModule({
@@ -20,6 +42,9 @@ const routes = [
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
+    AnalyticsComponent,
+    TasksComponent,
+    ProfileComponent
   ],
   imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
